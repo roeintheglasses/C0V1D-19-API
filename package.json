@@ -1,0 +1,19 @@
+{
+  "name": "c0v1d-19-api",
+  "version": "1.0.0",
+  "description": "API & Parser for covid-19 data provided by John Hopkins CSSE and worldometers.info",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "author": "Hrishi Jangir",
+  "license": "ISC",
+  "dependencies": {
+    "apicache": "^1.5.3",
+    "cheerio": "^1.0.0-rc.3",
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  }
+}
