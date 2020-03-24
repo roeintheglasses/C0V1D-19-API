@@ -37,7 +37,7 @@ For Fatality Rate
 ~url~ /api/fatality-rate
 
 ```
-## Don't forget to change '~url~' to whatever you're using, if localhost use http://localhost/api/
+## Don't forget to change ~url~ to whatever you're using, if localhost use http://localhost/api/
 
 ## Author :
 
