@@ -41,7 +41,7 @@ For Fatality Rate
 
 ## Author :
 
-*  **Hrishi Jangir** - *Other Works* - [GITHUB PROFILE](https://github.com/roeintheglasses)
+*  **Hrishi Jangir** - *Other Works* - [Github](https://github.com/roeintheglasses)
 
 ## Contributors 
 
