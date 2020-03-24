@@ -39,11 +39,10 @@ For Fatality Rate
 ```
 ## Don't forget to change '~url~' to whatever you're using, if localhost use http://localhost/api/
 
-## Authors
-  
+## Author :
 
 *  **Hrishi Jangir** - *Other Works* - [GITHUB PROFILE](https://github.com/roeintheglasses)
 
-## Contributor
+## Contributors 
 
-*  **Sparsh Bajaj** - [Website](https://sparshbajaj.co) *  * [Github](https://github.com/sparshbajaj)
+* Documentation by : **Sparsh Bajaj** - [Website](https://sparshbajaj.co) *  * [Github](https://github.com/sparshbajaj)
