@@ -15,7 +15,7 @@ git clone https://github.com/roeintheglasses/C0V1D-19-API.git
 ```
 ### Install dependencies and run the server
 
-cd to project folder
+within the repo directory
 
 ```
 
