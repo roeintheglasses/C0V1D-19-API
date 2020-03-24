@@ -45,4 +45,4 @@ For Fatality Rate
 
 ## Contributors 
 
-* Documentation by : **Sparsh Bajaj** - [Website](https://sparshbajaj.co) *  * [Github](https://github.com/sparshbajaj)
+* Documentation by : **Sparsh Bajaj** - [Website](https://sparshbajaj.co)  [Github](https://github.com/sparshbajaj)
