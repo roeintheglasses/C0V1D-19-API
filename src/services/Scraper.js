@@ -49,12 +49,12 @@ class Scraper {
         obj.dates.push({
           date: header,
           confirmed: +row[header] || 0,
-          recovered:
-            +recoveredRows.find(
-              i =>
-              roundOffCoord(i.Lat) === roundOffCoord(row.Lat) &&
-              roundOffCoord(i.Long) === roundOffCoord(row.Long)
-            )[header] || 0,
+          // recovered:
+          //   +recoveredRows.find(
+          //     i =>
+          //     roundOffCoord(i.Lat) === roundOffCoord(row.Lat) &&
+          //     roundOffCoord(i.Long) === roundOffCoord(row.Long)
+          //   )[header] || 0,
           death:
             +deathRows.find(
               i =>
@@ -105,7 +105,7 @@ class Scraper {
 
   getConfirmedCases() {
     return this.parseCSV(
-      `${this.timeSeriesURL}/time_series_19-covid-Confirmed.csv`
+      `${this.timeSeriesURL}/time_series_covid19_confirmed_global.csv`
     );
   }
 
@@ -117,7 +117,7 @@ class Scraper {
 
   getDeaths() {
     return this.parseCSV(
-      `${this.timeSeriesURL}/time_series_19-covid-Deaths.csv`
+      `${this.timeSeriesURL}/time_series_covid19_deaths_global.csv`
     );
   }
 
