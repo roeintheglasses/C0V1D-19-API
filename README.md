@@ -10,9 +10,7 @@ confirmed tested cases of Coronavirus infection
 the number of people who have reportedly died while sick with Coronavirus
 
 ### Data
-Data is in CSV format and updated daily. It is sourced from this upstream repository maintained by the amazing team at Johns Hopkins University Center for Systems Science and Engineering (CSSE) who have been doing a great public service from an early point by collating data from around the world.
-
-I have cleaned and normalized that data, for example tidying dates and consolidating several files into normalized time series. We have also added some metadata such as column descriptions and data packaged it.
+ Data is sourced from Johns Hopkins University Center for Systems Science and Engineering (CSSE). It is in CSV format and updated daily on the upstream repository maintained by the amazing team at Johns Hopkins University Center for Systems Science and Engineering (CSSE) who have been doing a great public service from an early point by collating data from around the world. I have cleaned and normalized that data, for example tidying dates and consolidating several files into normalized time series. 
   
 
 ## Getting Started  
