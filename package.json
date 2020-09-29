@@ -4,7 +4,8 @@
   "description": "API & Parser for covid-19 data provided by John Hopkins CSSE and worldometers.info",
   "main": "app.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "test": "nodemon src/app.js"
   },
   "author": "Hrishi Jangir",
   "license": "ISC",
@@ -16,5 +17,8 @@
     "csvtojson": "^2.0.10",
     "express": "^4.17.1",
     "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }

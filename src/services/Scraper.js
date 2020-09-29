@@ -8,17 +8,10 @@ class Scraper {
       'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series';
   }
 
-  getHTML(url) {
-    return new Promise((resolve, reject) => {
-      request.get(url, (error, _, body) => {
-        if (error) return reject(error);
-        resolve(cheerio.load(body));
-      });
-    });
-  }
+
 
   async fetchTimeSeries() {
-    const roundOffCoord = coord => parseFloat(coord.trim()).toFixed(5);
+    const roundOffCoord = coord => parseFloat(coord.trim()).toFixed(4);
 
     const data = [];
 
@@ -27,9 +20,9 @@ class Scraper {
     const headers = Object.keys(confirmedRows[0]);
 
     // Load recovered sheet
-    const recoveredRows = await this.getRecovered();
+    // const recoveredRows = await this.getRecovered();
 
-    // Load recovered sheet
+    // Load Death sheet
     const deathRows = await this.getDeaths();
 
     confirmedRows.forEach((row) => {
@@ -52,14 +45,14 @@ class Scraper {
           // recovered:
           //   +recoveredRows.find(
           //     i =>
-          //     roundOffCoord(i.Lat) === roundOffCoord(row.Lat) &&
-          //     roundOffCoord(i.Long) === roundOffCoord(row.Long)
+          //       roundOffCoord(i.Lat) === roundOffCoord(row.Lat) &&
+          //       roundOffCoord(i.Long) === roundOffCoord(row.Long)
           //   )[header] || 0,
           death:
             +deathRows.find(
               i =>
-              roundOffCoord(i.Lat) === roundOffCoord(row.Lat) &&
-              roundOffCoord(i.Long) === roundOffCoord(row.Long)
+                roundOffCoord(i.Lat) === roundOffCoord(row.Lat) &&
+                roundOffCoord(i.Long) === roundOffCoord(row.Long)
             )[header] || 0,
         });
       });
@@ -111,7 +104,7 @@ class Scraper {
 
   getRecovered() {
     return this.parseCSV(
-      `${this.timeSeriesURL}/time_series_19-covid-Recovered.csv`
+      `${this.timeSeriesURL}/time_series_covid19_recovered_global.csv`
     );
   }
 
@@ -165,6 +158,17 @@ class Scraper {
       byComorbidity
     };
   }
+
+  getHTML(url) {
+    return new Promise((resolve, reject) => {
+      request.get(url, (error, _, body) => {
+        if (error) return reject(error);
+        resolve(cheerio.load(body));
+      });
+    });
+  }
 }
+
+
 
 module.exports = Scraper;
